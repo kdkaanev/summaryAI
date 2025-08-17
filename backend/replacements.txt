@@ -1,0 +1,1 @@
+(sk-[A-Za-z0-9]{32,})==>OPENAI_API_KEY
