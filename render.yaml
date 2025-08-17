@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: django-backend
+    env: python
+    rootDir: ./backend
+    buildCommand: pip install -r requirements.txt && python manage.py migrate && python manage.py collectstatic --noinput
+    startCommand: gunicorn projectname.wsgi:application
+    envVars:
+      - key: DJANGO_SECRET_KEY
+        generateValue: true
+      - key: DJANGO_DEBUG
+        value: "False"
+      - key: OPENAI_API_KEY
+        sync: false   # Render ще очаква да го зададеш ръчно в Dashboard (или CI/CD секрети)
+
+  - type: static_site
+    name: vue-frontend
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
