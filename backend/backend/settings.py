@@ -62,7 +62,9 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",  # Vue dev server
+    "http://localhost:5173",
+    # Vue dev server
+    "https://summaryai-1.onrender.com"
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
