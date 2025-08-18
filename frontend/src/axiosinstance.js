@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosFA = axios.create({
-  baseURL: '  http://127.0.0.1:8000/',
+  baseURL: ' https://summaryai-6tu0.onrender.com/',
   headers: {
     'Content-Type': 'application/json',
   },

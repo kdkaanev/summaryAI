@@ -57,7 +57,7 @@ export default {
       }
       try {
         this.loading = true
-        const res = await axios.post('http://localhost:8000/api/summarize/', {
+        const res = await axios.post('https://summaryai-6tu0.onrender.com/api/summarize/', {
           url: this.url
         })
         this.summary = res.data.summary
