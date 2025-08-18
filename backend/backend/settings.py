@@ -25,8 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("DJANGO_SECRET")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = os.getenv("DJANGO_DEBUG", "Тrue")== "True"
-DEBUG = True
+DEBUG = os.getenv("DJANGO_DEBUG", "Тrue")== "True"
 
 ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
 if os.getenv("RENDER_EXTERNAL_HOSTNAME"):
