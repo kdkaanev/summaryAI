@@ -1,6 +1,6 @@
 <template>
   <div class="max-w-xl mx-auto p-4">
-    <h1 class="text-2xl font-bold mb-4">AI Обобщаване</h1>
+    <h1 class="text-2xl font-bold mb-4">AI Обобщаване Кънчо</h1>
     <input
       v-model="url"
       type="text"
